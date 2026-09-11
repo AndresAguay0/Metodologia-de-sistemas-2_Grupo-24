@@ -1,0 +1,28 @@
+# Dependencias
+node_modules/
+
+# Archivos SQL
+*.sqlite
+*.sqlite3
+database.sqlite
+
+# Compilaciones y builds
+dist/
+build/
+
+# Herramientas
+.vite/
+.eslintcache
+
+# Variables de entorno
+.env
+.env.*
+
+# Logs
+*.log
+
+# Archivos del SO y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
