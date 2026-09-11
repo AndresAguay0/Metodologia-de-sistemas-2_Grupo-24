@@ -33,13 +33,22 @@ Frontend:
 Requerimientos previos:
 Tener instalado Node v26 y npm
 
-Correr este comando en terminal:
+Abrir una terminal en bash
+Correr estos comando en la terminal:
+cd server
 npm install
+cd ..
+cd client
+npm install
+
 ---
 
 ### Cómo ejecutar el proyecto:
+Frontend (client/)
+npm run dev
 
-
+Backend (server/)
+npm run dev
 
 ---
 
