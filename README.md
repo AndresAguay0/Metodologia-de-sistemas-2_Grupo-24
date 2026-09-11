@@ -11,49 +11,52 @@
 En las ferreterías el control de stock manual suele complejizarse a medida que crece la variedad y/o cantidad de productos. 
 Nuestro sistema de gestión de stock se encarga de mantener la coherencia y consistencia de datos de los productos dejandole al personal solo la tarea de, a través de una interfaz, facilitar la actualización de la información del stock.
 
-
 ---
 
 ### Tecnología elegida:
-Backend y API:
--Runtime: Node.js
--Framework: Express
--Lenguaje: TypeScript
--ORM: Sequelize
--Base de Datos: SQLite
+#### Backend y API:
+- **Runtime:** *Node.js*
+- **Framework:** *Express*
+- **Lenguaje:** *TypeScript*
+- **ORM:** *Sequelize*
+- **Base de Datos:** *SQLite*
 
-Frontend:
--Librería UI: React
--Lenguaje: TypeScript
--Herramienta de Construcción: Vite
--Estilos: HTML y CSS
+#### Frontend:
+- **Librería UI:** *React*
+- **Lenguaje:** *TypeScript*
+- **Herramienta de Construcción:** *Vite*
+- **Estilos:** *HTML y CSS*
+
 ---
 
 ### Cómo instalar dependencias:
-Requerimientos previos:
-Tener instalado Node v26 y npm
+**Requerimientos previos:**
+Tener instalado **Node v26** y **npm**
 
-Abrir una terminal en bash
-Correr estos comando en la terminal:
+Abrir una terminal en bash y correr estos comando:
+```
 cd server
 npm install
 cd ..
 cd client
 npm install
+```
 
 ---
 
 ### Cómo ejecutar el proyecto:
-Frontend (client/)
+#### Frontend (client/)
+```
 npm run dev
+```
 
-Backend (server/)
+#### Backend (server/)
+```
 npm run dev
+```
 
 ---
 
 ### Estado actual y pendientes conocidos:
-
-
 
 ---
