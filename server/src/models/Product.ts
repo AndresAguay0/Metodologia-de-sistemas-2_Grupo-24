@@ -1,5 +1,6 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../config/database.js";
+import { HardwareStore } from "./HardwareStore.js"
 
 export class Product extends Model {
     public id!: number;
@@ -9,6 +10,7 @@ export class Product extends Model {
     public stock!: number;
     public minStock!: number;
     public category!: string;
+    public hardwareStoreId!: number;
 }
 
 Product.init(
@@ -50,3 +52,7 @@ Product.init(
         tableName: "products",
     }
 );
+
+// Relación. Una Ferretería tiene muchos Productos
+HardwareStore.hasMany(Product, { foreignKey: "hardwareStoreId", as: "products" });
+Product.belongsTo(HardwareStore, { foreignKey: "hardwareStoreId", as: "hardwareStore" });
