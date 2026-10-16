@@ -31,7 +31,7 @@
 
 - Cada uno se encarga de vincular la operación CRUD correspondiente con la dirección de la api.
 
-# Desiciones de diseño
+# Decisiones de diseño
 
 De momento, por la simplicidad de nuestro proyecto, no vemos necesario incorporar ningún patron de diseño. Creemos que actualmente traerían mas contras que pros.
 
