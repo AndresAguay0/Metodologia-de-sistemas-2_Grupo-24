@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import sequelize from "./config/database.js";
+import productRoutes from "./routes/productRoutes.js";
 
 // Modelos
 import "./models/HardwareStore.js";
@@ -18,6 +19,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.json({ message: "API de Sistema de Gestión de Stock Para Ferretería funcionando."});
 });
+
+// Ruta de productos
+app.use("/api/productos", productRoutes);
 
 // Sincronización de base de datos y levante del server
 const startServer = async () => {
