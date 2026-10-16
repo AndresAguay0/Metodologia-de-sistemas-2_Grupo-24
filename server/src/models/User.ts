@@ -1,14 +1,20 @@
-import { DataTypes, Model } from "sequelize";
+import { CreationOptional, DataTypes, InferAttributes, InferCreationAttributes, Model } from "sequelize";
 import sequelize from "../config/database.js";
 import { HardwareStore } from "./HardwareStore.js";
 import { UserHardwareStore } from "./UserHardwareStore.js";
 
-export class User extends Model {
-    public id!: number;
-    public email!: string;
-    public passwordHash!: string;
-    public role!: "dueño" | "gerente" | "empleado";
-    public hardwareStoreId?: number; // Se usa solo si role === "empleado"
+export class User extends Model<
+InferAttributes<User>,
+InferCreationAttributes<User>> {
+    declare id: CreationOptional<number>;
+    declare email: string;
+    declare passwordHash: string;
+    declare role: CreationOptional<"dueño" | "gerente" | "empleado">;
+    declare hardwareStoreId?: CreationOptional<number | null>;
+
+    // Metodos para asociaciones
+    declare setManagedStores: (stores: number[] | HardwareStore[]) => Promise<void>;
+    declare getManagedStores: () => Promise<HardwareStore[]>;
 }
 
 User.init(
@@ -30,8 +36,12 @@ User.init(
         role: {
             type: DataTypes.ENUM("dueño", "gerente", "empleado"),
             allowNull: false,
-            defaultValue: "empleado"
+            defaultValue: "empleado",
         },
+        hardwareStoreId: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        }
     },
     { 
         sequelize,

@@ -1,10 +1,13 @@
-import { DataTypes, Model } from "sequelize";
+import { CreationOptional, DataTypes, InferAttributes, InferCreationAttributes, Model } from "sequelize";
 import sequelize from "../config/database.js";
 
-export class HardwareStore extends Model {
-    public id!: number;
-    public name!: string;
-    public address!: string;
+export class HardwareStore extends Model<
+InferAttributes<HardwareStore>,
+InferCreationAttributes<HardwareStore>
+> {
+    declare id: CreationOptional<number>;
+    declare name: string;
+    declare address: string;
 }
 
 HardwareStore.init(

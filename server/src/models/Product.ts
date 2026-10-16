@@ -1,16 +1,18 @@
-import { DataTypes, Model } from "sequelize";
+import { CreationOptional, DataTypes, InferAttributes, InferCreationAttributes, Model } from "sequelize";
 import sequelize from "../config/database.js";
 import { HardwareStore } from "./HardwareStore.js"
 
-export class Product extends Model {
-    public id!: number;
-    public name!: string;
-    public description!: string;
-    public price!: number;
-    public stock!: number;
-    public minStock!: number;
-    public category!: string;
-    public hardwareStoreId!: number;
+export class Product extends Model<
+InferAttributes<Product>,
+InferCreationAttributes<Product>> {
+    declare id: CreationOptional<number>;
+    declare name: string;
+    declare description: CreationOptional<string>;
+    declare price: number;
+    declare stock: CreationOptional<number>;
+    declare minStock: CreationOptional<number>;
+    declare category: string;
+    declare hardwareStoreId: number;
 }
 
 Product.init(
@@ -44,6 +46,10 @@ Product.init(
         },
         category: {
             type: DataTypes.STRING,
+            allowNull: false,
+        },
+        hardwareStoreId: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
     },
