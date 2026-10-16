@@ -4,9 +4,10 @@
   "description": "Backend del sistema de gestion de stock",
   "license": "MIT",
   "author": "Andres Aguayo, Fabricio Maida, Ailen Villalba",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.ts",
   "scripts": {
+    "dev": "tsx watch src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
