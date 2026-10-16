@@ -8,11 +8,21 @@ import "./models/User.js";
 import "./models/UserHardwareStore.js";
 import "./models/Product.js";
 
+// Rutas
+import productRoutes from "./routes/product.routes.js";
+import hardwareStoreRoutes from "./routes/hardwareStore.routes.js";
+import userRoutes from "./routes/user.routes.js"
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
+
+// Uso de Rutas
+app.use("/api/products", productRoutes);
+app.use("/api/stores", hardwareStoreRoutes);
+app.use("/api/users", userRoutes);
 
 // Ruta de prueba
 app.get("/", (req, res) => {
