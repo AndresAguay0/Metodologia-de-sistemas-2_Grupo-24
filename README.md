@@ -64,7 +64,8 @@ npm run dev
 ---
 
 ### Estado actual y pendientes conocidos:
-- Backend avanzado. Falta agregar capaz de seguridad (bcrypt y jwt)
-- Front End completo
+- Backend avanzado.
+- Falta agregar capaz de seguridad (bcrypt y jwt).
+- Falta Front End completo.
 
 ---
