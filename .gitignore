@@ -16,7 +16,6 @@ build/
 
 # Variables de entorno
 .env
-.env.*
 
 # Logs
 *.log

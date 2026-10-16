@@ -4,9 +4,10 @@
   "description": "Backend del sistema de gestion de stock",
   "license": "MIT",
   "author": "Andres Aguayo, Fabricio Maida, Ailen Villalba",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.ts",
   "scripts": {
+    "dev": "tsx watch src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -19,7 +20,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
-    "@types/node": "^22.20.2",
+    "@types/node": "^22.20.5",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2"
   }

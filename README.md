@@ -29,11 +29,17 @@ Nuestro sistema de gestión de stock se encarga de mantener la coherencia y cons
 
 ---
 
-### Cómo instalar dependencias:
+### Cómo instalar el proyecto:
 **Requerimientos previos:**
 Tener instalado **Node v26** y **npm**
 
-Abrir una terminal en bash y correr estos comando:
+Clonar el repositorio.
+```
+git clone https://github.com/AndresAguay0/Metodologia-de-sistemas-2_Grupo-24.git
+cd Metodologia-de-sistemas-2_Grupo-24
+```
+
+Correr estos comando:
 ```
 cd server
 npm install
@@ -58,5 +64,8 @@ npm run dev
 ---
 
 ### Estado actual y pendientes conocidos:
+- Backend avanzado.
+- Falta agregar capaz de seguridad (bcrypt y jwt).
+- Falta Front End completo.
 
 ---
